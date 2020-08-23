@@ -6,38 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <title>Counter</title>
 </head>
 
 <body>
+    <div class="section">
+        dncidskcoals;,;da,
+    </div>
     <div class="container-fluid">
-        <div class="card">
+        <div class="card" style="width: 40%;">
             <div class="card-body bg-dark">
                 <div class="row justify-content-md-center">
-                    <div class="col-md-2">
-                        <button type="button" class="btn btn-dark" onclick="displaycount()"> 🔥 </button>
+                    <div class="col-md-3">
+                        <button type="button" class="my-element btn btn-dark" onclick="displaycount();ani();"> 🔥
+                        </button>
                         <button type="button" class="btn btn-dark" onclick="displaycount()" id="carrier"> 0 </button>
                     </div>
-                    <div class="col-md-2">
-                        <button type="button" class="btn btn-dark" onclick="displaycount1()"> ❤️ </button>
+                    <div class="col-md-3">
+                        <button type="button" class="my-element1 btn btn-dark" onclick="displaycount1();ani1();"> ❤️
+                        </button>
                         <button type="button" class="btn btn-dark" onclick="displaycount1()" id="carrier1"> 0 </button>
                     </div>
-                    <div class="col-md-2">
-                        <button type="button" class="btn btn-dark" onclick="displaycount2()"> 😂 </button>
+                    <div class="col-md-3">
+                        <button type="button" class="my-element2 btn btn-dark" onclick="displaycount2();ani2();"> 😂
+                        </button>
                         <button type="button" class="btn btn-dark" onclick="displaycount2()" id="carrier2"> 0 </button>
                     </div>
-                    <div class="col-md-2">
-                        <button type="button" class="btn btn-dark" onclick="displaycount3()"> 👏 </button>
+                    <div class="col-md-3">
+                        <button type="button" class="my-element3 btn btn-dark" onclick="displaycount3();ani3();"> 👏
+                        </button>
                         <button type="button" class="btn btn-dark" onclick="displaycount3()" id="carrier3"> 0 </button>
                     </div>
                 </div>
             </div>
-          </div>
+        </div>
     </div>
 
 </body>
 
 <script>
+    function ani() {
+        const element = document.querySelector('.my-element');
+        element.classList.add('animate__animated', 'animate__slideOutUp');
+    }
+    function ani1() {
+        const element = document.querySelector('.my-element1');
+        element.classList.add('animate__animated', 'animate__fadeOutUp');
+    }
+    function ani2() {
+        const element = document.querySelector('.my-element2');
+        element.classList.add('animate__animated', 'animate__fadeOutUp');
+    }
+    function ani3() {
+        const element = document.querySelector('.my-element3');
+        element.classList.add('animate__animated', 'animate__fadeOutUp');
+    }
     var count = (function () {
         var counter = 0;
         return function () { return counter += 1; }
@@ -68,5 +94,3 @@
         document.getElementById('carrier3').innerHTML = count3();
     }
 </script>
-
-</html>
