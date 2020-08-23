@@ -1,25 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Counter</title>
 </head>
-
 <body>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+    <button onclick="displaycount()"> Click </button>
+    <p id="carrier"> 0 </p>
+    <button onclick="displaycount1()"> Click </button>
+    <p id="carrier1"> 0 </p>
+    <button onclick="displaycount2()"> Click </button>
+    <p id="carrier2"> 0 </p>
+    <button onclick="displaycount3()"> Click </button>
+    <p id="carrier3"> 0 </p>
+    
 </body>
 
+<script>
+    var count = (function () {
+        var counter =0;
+        return function(){ return counter +=1;}
+    })();
+    var count1 = (function () {
+        var counter =0;
+        return function(){ return counter +=1;}
+    })();
+    var count2 = (function () {
+        var counter =0;
+        return function(){ return counter +=1;}
+    })();
+    var count3 = (function () {
+        var counter =0;
+        return function(){ return counter +=1;}
+    })();
+
+    function displaycount(){
+        document.getElementById('carrier').innerHTML=count();
+    }
+    function displaycount1(){
+        document.getElementById('carrier1').innerHTML=count1();
+    }
+    function displaycount2(){
+        document.getElementById('carrier2').innerHTML=count2();
+    }
+    function displaycount3(){
+        document.getElementById('carrier3').innerHTML=count3();
+    }
+</script>
 </html>
