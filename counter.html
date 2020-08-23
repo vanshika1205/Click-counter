@@ -8,77 +8,90 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css">
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <title>Counter</title>
 </head>
 
 <body>
-    <div class="section">
-        dncidskcoals;,;da,
-    </div>
     <div class="container-fluid">
-        <div class="card" style="width: 40%;">
-            <div class="card-body bg-dark">
-                <div class="row justify-content-md-center">
-                    <div class="col-md-3">
-                        <button type="button" class="my-element btn btn-dark" onclick="displaycount();ani();"> 🔥
-                        </button>
-                        <button type="button" class="btn btn-dark" onclick="displaycount()" id="carrier"> 0 </button>
+        <div class="card bg-light border border-light" style="width: 35rem;">
+            <div class="card-body justify-content-md-center p-2">
+                <div class="row justify-content-md-center p-0">
+                    <div class="col-md-2">
+                        <i type="button" class="my-element btn em em-fire" onclick="displaycount();ani();"></i>
+                        <button type="button" class="btn btn-light" onclick="displaycount()" id="carrier">0</button>
                     </div>
-                    <div class="col-md-3">
-                        <button type="button" class="my-element1 btn btn-dark" onclick="displaycount1();ani1();"> ❤️
-                        </button>
-                        <button type="button" class="btn btn-dark" onclick="displaycount1()" id="carrier1"> 0 </button>
+                    <div class="col-md-2">
+                        <i type="button" class="my-element1 btn em em-heart" onclick="displaycount1();ani1();"></i>
+                        <button type="button" class="btn btn-light" onclick="displaycount1()" id="carrier1">0</button>
                     </div>
-                    <div class="col-md-3">
-                        <button type="button" class="my-element2 btn btn-dark" onclick="displaycount2();ani2();"> 😂
-                        </button>
-                        <button type="button" class="btn btn-dark" onclick="displaycount2()" id="carrier2"> 0 </button>
+                    <div class="col-md-2">
+                        <i type="button" class="my-element2 btn em em-joy" onclick="displaycount2();ani2();"></i>
+                        <button type="button" class="btn btn-light" onclick="displaycount2()" id="carrier2">0</button>
                     </div>
-                    <div class="col-md-3">
-                        <button type="button" class="my-element3 btn btn-dark" onclick="displaycount3();ani3();"> 👏
-                        </button>
-                        <button type="button" class="btn btn-dark" onclick="displaycount3()" id="carrier3"> 0 </button>
+                    <div class="col-md-2">
+                        <i type="button" class="my-element3 btn em em-clap" onclick="displaycount3();ani3();"></i>
+                        <button type="button" class="btn btn-light" onclick="displaycount3()" id="carrier3">0</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 </body>
 
 <script>
     function ani() {
         const element = document.querySelector('.my-element');
-        element.classList.add('animate__animated', 'animate__slideOutUp');
+        element.style.setProperty('animation-iteration-count', '2');
+        element.style.setProperty('--animate-duration', '0.35s');
+        element.classList.add('animate__animated', 'animate__fadeOutUp');
+        element.addEventListener('animationend', () => {
+            element.classList.remove('animate__fadeOutUp');
+        });
     }
     function ani1() {
         const element = document.querySelector('.my-element1');
+        element.style.setProperty('animation-iteration-count', '2');
+        element.style.setProperty('--animate-duration', '0.35s');
         element.classList.add('animate__animated', 'animate__fadeOutUp');
+        element.addEventListener('animationend', () => {
+            element.classList.remove('animate__fadeOutUp');
+        });
     }
     function ani2() {
         const element = document.querySelector('.my-element2');
+        element.style.setProperty('animation-iteration-count', '2');
+        element.style.setProperty('--animate-duration', '0.35s');
         element.classList.add('animate__animated', 'animate__fadeOutUp');
+        element.addEventListener('animationend', () => {
+            element.classList.remove('animate__fadeOutUp');
+        });
     }
     function ani3() {
         const element = document.querySelector('.my-element3');
+        element.style.setProperty('animation-iteration-count', '2');
+        element.style.setProperty('--animate-duration', '0.35s');
         element.classList.add('animate__animated', 'animate__fadeOutUp');
+        element.addEventListener('animationend', () => {
+            element.classList.remove('animate__fadeOutUp');
+        });
     }
     var count = (function () {
         var counter = 0;
-        return function () { return counter += 1; }
+        return function () { return counter += 2; }
     })();
     var count1 = (function () {
         var counter = 0;
-        return function () { return counter += 1; }
+        return function () { return counter += 2; }
     })();
     var count2 = (function () {
         var counter = 0;
-        return function () { return counter += 1; }
+        return function () { return counter += 2; }
     })();
     var count3 = (function () {
         var counter = 0;
-        return function () { return counter += 1; }
+        return function () { return counter += 2; }
     })();
 
     function displaycount() {
