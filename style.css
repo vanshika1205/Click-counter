@@ -1,0 +1,62 @@
+body{
+    background : #f3f3f3;
+}
+.dancing-icon
+{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    margin: 25px auto;
+}
+.heart
+{
+    position: absolute;
+    top:-20px;
+    right: 0px;
+    animation: 1s ease-in-out hearts normal 1;
+}
+
+.heart:nth-child(1)
+{
+    left: 5px;
+    animation-delay:0s ;
+}
+.heart:nth-child(2)
+{
+    left: 32px;
+    animation-delay:0s ;
+}
+.heart:nth-child(3)
+{
+    left: 52px;
+    animation-delay:0s ;
+}
+
+@keyframes hearts
+{
+    0%
+    {
+        transform: rotate(20deg);
+        opacity: 0;
+    }
+    50%
+    {
+        transform: rotate(-20deg);
+        opacity: 1;
+    }
+    100%
+    {
+        transform: rotate(20deg);
+        opacity: 0;
+        top: -150px;
+    }
+}
+.bot-icon
+{
+    position: absolute;
+    top: 5px;
+    left:-10px;
+    height: 100px;
+    width: 100px;
+    background-size: 100px 100px;
+}

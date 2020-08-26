@@ -9,17 +9,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css">
     <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="animate.css">
     <title>Counter</title>
 </head>
 
 <body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
     <div class="container-fluid">
         <div class="card bg-light border border-light" style="width: 35rem;">
             <div class="card-body justify-content-md-center p-2">
                 <div class="row justify-content-md-center p-0">
                     <div class="col-md-2">
-                        <i type="button" class="my-element btn em em-fire" onclick="displaycount();ani();"></i>
+                        <i type="button" class="fire my-element btn em em-fire" onclick="displaycount();ani();"></i>
+                        <i type="button" class="fire my-element btn em em-fire" onclick="displaycount();ani();"></i>
                         <button type="button" class="btn btn-light" onclick="displaycount()" id="carrier">0</button>
                     </div>
                     <div class="col-md-2">
@@ -43,8 +52,8 @@
 <script>
     function ani() {
         const element = document.querySelector('.my-element');
-        element.style.setProperty('animation-iteration-count', '2');
-        element.style.setProperty('--animate-duration', '0.35s');
+        element.style.setProperty('animation-iteration-count', '1');
+        element.style.setProperty('--animate-duration', '0.5s');
         element.classList.add('animate__animated', 'animate__fadeOutUp');
         element.addEventListener('animationend', () => {
             element.classList.remove('animate__fadeOutUp');
@@ -52,8 +61,8 @@
     }
     function ani1() {
         const element = document.querySelector('.my-element1');
-        element.style.setProperty('animation-iteration-count', '2');
-        element.style.setProperty('--animate-duration', '0.35s');
+        element.style.setProperty('animation-iteration-count', '1');
+        element.style.setProperty('--animate-duration', '0.5s');
         element.classList.add('animate__animated', 'animate__fadeOutUp');
         element.addEventListener('animationend', () => {
             element.classList.remove('animate__fadeOutUp');
@@ -61,8 +70,8 @@
     }
     function ani2() {
         const element = document.querySelector('.my-element2');
-        element.style.setProperty('animation-iteration-count', '2');
-        element.style.setProperty('--animate-duration', '0.35s');
+        element.style.setProperty('animation-iteration-count', '1');
+        element.style.setProperty('--animate-duration', '0.5s');
         element.classList.add('animate__animated', 'animate__fadeOutUp');
         element.addEventListener('animationend', () => {
             element.classList.remove('animate__fadeOutUp');
@@ -70,8 +79,8 @@
     }
     function ani3() {
         const element = document.querySelector('.my-element3');
-        element.style.setProperty('animation-iteration-count', '2');
-        element.style.setProperty('--animate-duration', '0.35s');
+        element.style.setProperty('animation-iteration-count', '1');
+        element.style.setProperty('--animate-duration', '0.5s');
         element.classList.add('animate__animated', 'animate__fadeOutUp');
         element.addEventListener('animationend', () => {
             element.classList.remove('animate__fadeOutUp');
@@ -79,19 +88,19 @@
     }
     var count = (function () {
         var counter = 0;
-        return function () { return counter += 2; }
+        return function () { return counter += 1; }
     })();
     var count1 = (function () {
         var counter = 0;
-        return function () { return counter += 2; }
+        return function () { return counter += 1; }
     })();
     var count2 = (function () {
         var counter = 0;
-        return function () { return counter += 2; }
+        return function () { return counter += 1; }
     })();
     var count3 = (function () {
         var counter = 0;
-        return function () { return counter += 2; }
+        return function () { return counter += 1; }
     })();
 
     function displaycount() {
